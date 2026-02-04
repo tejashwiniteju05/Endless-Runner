@@ -5,16 +5,6 @@ using UnityEngine;
 public class LevelManger : MonoBehaviour
 {
     [SerializeField]GameObject LevelsPannel;
-    
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
     public void Beginner()
     {
         PlayerPrefs.SetInt("Level",0);

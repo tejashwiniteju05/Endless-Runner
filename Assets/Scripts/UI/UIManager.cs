@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]GameObject MainMenuPannel;
     [SerializeField]GameObject CountdownPannel;
     [SerializeField]TMPro.TMP_Text CountdownText;
+    [SerializeField]GameObject SettingsPannel;
     static bool SkipMenu=false;
     void Start()
     {
@@ -52,6 +53,14 @@ public class UIManager : MonoBehaviour
     {   
         PausePannel.SetActive(false);
         MainMenuPannel.SetActive(true);
+    }
+    public void BackButton()
+    {
+        SettingsPannel.SetActive(false);
+    }
+    public void ShowSettings()
+    {
+        SettingsPannel.SetActive(true);
     }
     IEnumerator ResumeCountdown()
     {
