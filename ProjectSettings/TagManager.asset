@@ -12,6 +12,8 @@ TagManager:
   - plane2
   - Obstacle
   - RunPower
+  - Magnet
+  - MagnetArea
   layers:
   - Default
   - TransparentFX

@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 96347511}
   - component: {fileID: 96347510}
   - component: {fileID: 96347514}
+  - component: {fileID: 96347515}
   - component: {fileID: 96347509}
   m_Layer: 0
   m_Name: Cube
@@ -365,6 +366,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1376382175}
+  - {fileID: 843011003}
   m_Father: {fileID: 767667224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &96347509
@@ -497,6 +499,19 @@ MonoBehaviour:
   SpeedMultiplier: 2
   Duration: 5
   fadeAmount: 0.5
+--- !u!114 &96347515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96347507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2d811614809d44a4714d1d589c91a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
 --- !u!1 &138173928
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,7 +2460,7 @@ GameObject:
   - component: {fileID: 551576668}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: RunPower
+  m_TagString: Magnet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2754,6 +2769,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1088944659}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &672696447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672696442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6c56654daf8344bae4a9ef787d0ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!1 &759089906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,7 +2943,7 @@ Transform:
   m_GameObject: {fileID: 767667223}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.77, y: 0.52, z: -4.45}
+  m_LocalPosition: {x: 1.77, y: 0.52, z: -4.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3188,6 +3216,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795411871}
   m_CullTransparentMesh: 1
+--- !u!1 &843011002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 843011003}
+  - component: {fileID: 843011004}
+  m_Layer: 0
+  m_Name: magnetarea
+  m_TagString: MagnetArea
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &843011003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843011002}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.060000062, y: 0, z: 0.21200007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 96347508}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &843011004
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843011002}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &870241209
 GameObject:
   m_ObjectHideFlags: 0
@@ -3916,6 +3997,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7338329855165262971, guid: b3a92fe3ab0f1e243acb345a5b4600f9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8827177928153282762, guid: b3a92fe3ab0f1e243acb345a5b4600f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3969,7 +4055,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 625368823268322199, guid: b3a92fe3ab0f1e243acb345a5b4600f9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 672696447}
   m_SourcePrefab: {fileID: 100100000, guid: b3a92fe3ab0f1e243acb345a5b4600f9, type: 3}
 --- !u!1 &1119944628
 GameObject:
